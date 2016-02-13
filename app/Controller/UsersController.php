@@ -10,20 +10,14 @@ class UsersController extends AppController {
   }
 
   public function index() {
-    $this->autoLayout = false;
   }
 
   public function add() { //新規会員登録処理
-    $this->autoLayout = false;
     $this->request->data['User']['password'] = AuthComponent::password($this->request->data['User']['password']);
+    // $this->request->data['User']['password']にフォームからの入力値が入っている。これをパスワード化する処理。
 
-      $this->User->save($this->request->data);
+      $this->User->save($this->request->data); //データベースにデータを保存
 
-      return $this->redirect(
-        array(
-            'controller' => 'posts',
-            'action' => 'index'
-        )
-      );
+      return $this->redirect( array ('controller' => 'posts', 'action' => 'index')); //posts/indexにリダイレクトさせる
   }
 }

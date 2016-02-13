@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-#wrapper {
+#container {
   width: 1280px;
   margin: 0 auto;
 }
@@ -45,12 +45,30 @@ h2 {
   margin-top: -10px;
 }
 
-.link a {
+
+
+.titlelink a {
   text-decoration: none;
 }
 
-.link a:hover {
-  text-decoration: underline;
+.titlelink a:hover {
+  color: #f75a53;
+}
+
+.editlink a {
+  text-decoration: none;
+}
+
+.editlink a:hover {
+  color: #f75a53;
+}
+
+.deletelink a {
+  text-decoration: none;
+}
+
+.deletelink a:hover {
+  color: #f75a53;
 }
 
 footer {
